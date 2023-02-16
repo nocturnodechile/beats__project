@@ -1,0 +1,61 @@
+.team {
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &--version--desktop {
+
+    @include tablets {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: rem(20px);
+    flex: 1;
+  }
+
+  &__member {
+    width: rem(220px);
+    height: rem(290px);
+    margin-bottom: rem(24px);
+    overflow: hidden;
+
+    @include tablets {
+      overflow: hidden;
+      transition: height .3s;
+      height: 0;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    margin-bottom: rem(10px);
+    cursor: pointer;
+    text-decoration: none;
+    color: #292929;
+  }
+
+  &__content {
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    max-width: rem(220px);
+    overflow: hidden;
+    height: 0;
+    transition: height .3s;
+
+    &-block-title {
+      margin-bottom: rem(4px);
+      color: #292929;
+    }
+  }
+
+}
